@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>White's Grocery | Fresh Food & Everyday Essentials</title>
+  <title>White's Grocery | Fresh Choices. Local Heart.</title>
 
   <meta
     name="description"
-    content="White's Grocery — a friendly local grocery destination in Gananoque, Ontario, offering fresh food, everyday essentials and great service."
+    content="White's Grocery in Gananoque, Ontario — a convenient local destination for everyday essentials and grocery needs."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,18 +21,18 @@
 
   <style>
     :root {
-      --green: #174d35;
-      --green-dark: #0d3323;
-      --green-light: #eaf5ed;
-      --cream: #f8f5ed;
+      --green: #123c32;
+      --green-dark: #092a23;
+      --green-light: #1d5949;
+      --cream: #f8f4ea;
       --white: #ffffff;
-      --orange: #e67b32;
-      --orange-dark: #c96120;
-      --text: #1c241f;
-      --muted: #68736c;
-      --border: #e5e9e5;
-      --shadow: 0 18px 45px rgba(15, 35, 24, 0.10);
-      --radius: 22px;
+      --orange: #e98b3a;
+      --orange-dark: #c96c22;
+      --text: #17231f;
+      --muted: #66736d;
+      --border: rgba(18, 60, 50, 0.12);
+      --shadow: 0 20px 60px rgba(9, 42, 35, 0.12);
+      --radius: 24px;
     }
 
     * {
@@ -48,40 +48,32 @@
     body {
       font-family: "DM Sans", sans-serif;
       color: var(--text);
-      background: var(--white);
+      background: var(--cream);
       line-height: 1.6;
-      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     img {
       width: 100%;
       display: block;
-      object-fit: cover;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button {
-      font: inherit;
     }
 
     .container {
-      width: min(1160px, calc(100% - 40px));
-      margin: 0 auto;
+      width: min(1180px, 92%);
+      margin: auto;
     }
 
-    /* =========================
-       TOP BAR
-    ========================= */
+    /* TOP BAR */
 
     .topbar {
       background: var(--green-dark);
       color: white;
       font-size: 13px;
-      padding: 9px 0;
+      padding: 10px 0;
     }
 
     .topbar-inner {
@@ -91,89 +83,73 @@
       gap: 20px;
     }
 
-    .topbar-left,
-    .topbar-right {
-      display: flex;
-      align-items: center;
-      gap: 18px;
+    .topbar a {
+      color: #ffd9a9;
+      font-weight: 700;
     }
 
-    .topbar span {
-      opacity: .92;
-    }
-
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,.96);
+      background: rgba(248, 244, 234, 0.94);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(0,0,0,.06);
+      border-bottom: 1px solid var(--border);
     }
 
     nav {
-      min-height: 82px;
+      height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 11px;
-      font-weight: 800;
+      gap: 12px;
     }
 
-    .logo-icon {
+    .logo-mark {
       width: 46px;
       height: 46px;
-      border-radius: 14px;
+      border-radius: 15px;
       background: var(--green);
       color: white;
       display: grid;
       place-items: center;
-      font-size: 23px;
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      font-weight: 800;
     }
 
     .logo-text strong {
       display: block;
       font-family: "Playfair Display", serif;
-      color: var(--green);
       font-size: 21px;
       line-height: 1;
+      color: var(--green);
     }
 
-    .logo-text small {
-      display: block;
-      color: var(--orange);
+    .logo-text span {
       font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--orange-dark);
       font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-top: 4px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 29px;
-      list-style: none;
-    }
-
-    .nav-links a {
+      gap: 30px;
       font-size: 14px;
-      font-weight: 600;
-      color: #465049;
-      transition: .25s ease;
+      font-weight: 700;
     }
 
     .nav-links a:hover {
-      color: var(--green);
+      color: var(--orange-dark);
     }
 
     .nav-cta {
@@ -181,74 +157,90 @@
       color: white !important;
       padding: 12px 19px;
       border-radius: 999px;
-      box-shadow: 0 7px 20px rgba(230,123,50,.22);
     }
 
-    .nav-cta:hover {
-      background: var(--orange-dark);
-      transform: translateY(-1px);
-    }
-
-    .menu-btn {
+    .mobile-menu {
       display: none;
       border: 0;
       background: var(--green);
       color: white;
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      font-size: 22px;
       cursor: pointer;
-      font-size: 21px;
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
-      min-height: 690px;
+      padding: 28px 0 80px;
+    }
+
+    .hero-card {
+      min-height: 650px;
+      border-radius: 34px;
+      overflow: hidden;
+      position: relative;
       background:
-        linear-gradient(90deg,
-          rgba(9, 31, 20, .91) 0%,
-          rgba(9, 31, 20, .74) 42%,
-          rgba(9, 31, 20, .22) 100%),
-        url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1800&q=85")
+        linear-gradient(
+          90deg,
+          rgba(5, 31, 25, 0.94) 0%,
+          rgba(5, 31, 25, 0.72) 42%,
+          rgba(5, 31, 25, 0.16) 100%
+        ),
+        url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1800&q=90")
         center/cover;
-      color: white;
+      box-shadow: var(--shadow);
       display: flex;
       align-items: center;
     }
 
     .hero-content {
-      width: min(690px, 100%);
-      padding: 80px 0;
+      color: white;
+      max-width: 680px;
+      padding: 70px;
     }
 
     .eyebrow {
-      color: #f4a267;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 2.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      padding: 9px 14px;
+      border-radius: 999px;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: #ffd28f;
+      border-radius: 50%;
     }
 
     .hero h1 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(48px, 7vw, 82px);
-      line-height: .99;
-      letter-spacing: -2px;
-      margin-bottom: 24px;
+      font-size: clamp(48px, 7vw, 86px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
     }
 
     .hero h1 span {
-      color: #f0a15f;
+      color: #ffb15c;
     }
 
     .hero p {
-      color: rgba(255,255,255,.87);
-      font-size: 18px;
       max-width: 590px;
+      font-size: 18px;
+      color: rgba(255,255,255,0.88);
       margin-bottom: 34px;
     }
 
@@ -260,22 +252,18 @@
 
     .btn {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 9px;
-      padding: 15px 24px;
+      padding: 15px 23px;
       border-radius: 999px;
-      font-weight: 700;
-      font-size: 14px;
-      border: 1px solid transparent;
-      transition: .25s ease;
-      cursor: pointer;
+      font-weight: 800;
+      transition: 0.25s ease;
     }
 
     .btn-primary {
       background: var(--orange);
       color: white;
-      box-shadow: 0 10px 25px rgba(230,123,50,.25);
     }
 
     .btn-primary:hover {
@@ -290,209 +278,89 @@
 
     .btn-light:hover {
       transform: translateY(-2px);
-      background: #f4f7f4;
     }
 
-    .btn-outline {
-      border-color: rgba(255,255,255,.45);
+    /* QUOTE */
+
+    .quote {
+      padding: 10px 0 90px;
+    }
+
+    .quote-box {
+      background: var(--green);
       color: white;
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: var(--green);
-    }
-
-    /* =========================
-       TRUST STRIP
-    ========================= */
-
-    .trust-strip {
-      margin-top: -45px;
+      border-radius: var(--radius);
+      padding: 55px;
+      text-align: center;
       position: relative;
-      z-index: 10;
-    }
-
-    .trust-grid {
-      background: white;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid var(--border);
       overflow: hidden;
     }
 
-    .trust-item {
-      padding: 25px 22px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      border-right: 1px solid var(--border);
+    .quote-box::before {
+      content: "“";
+      position: absolute;
+      font-family: "Playfair Display", serif;
+      font-size: 180px;
+      opacity: 0.08;
+      left: 30px;
+      top: -50px;
     }
 
-    .trust-item:last-child {
-      border-right: 0;
+    .quote-box p {
+      max-width: 850px;
+      margin: auto;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.18;
+      position: relative;
     }
 
-    .trust-icon {
-      min-width: 44px;
-      width: 44px;
-      height: 44px;
-      border-radius: 13px;
-      background: var(--green-light);
-      display: grid;
-      place-items: center;
-      font-size: 21px;
-    }
-
-    .trust-item strong {
+    .quote-box small {
       display: block;
-      font-size: 14px;
-      margin-bottom: 2px;
-    }
-
-    .trust-item span {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    /* =========================
-       SECTION
-    ========================= */
-
-    section {
-      padding: 105px 0;
-    }
-
-    .section-heading {
-      max-width: 650px;
-      margin-bottom: 48px;
-    }
-
-    .section-heading.center {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    .section-label {
-      color: var(--orange-dark);
-      font-size: 12px;
-      font-weight: 800;
+      margin-top: 20px;
+      color: #b9d6cc;
       letter-spacing: 2px;
       text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* SECTION HEAD */
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .section-kicker {
+      color: var(--orange-dark);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 11px;
+      font-weight: 900;
       margin-bottom: 10px;
     }
 
-    .section-heading h2 {
+    .section h2 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(34px, 4vw, 52px);
-      line-height: 1.1;
-      color: var(--green-dark);
-      margin-bottom: 15px;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1;
+      color: var(--green);
     }
 
-    .section-heading p {
+    .section-intro {
+      max-width: 430px;
       color: var(--muted);
-      font-size: 16px;
     }
 
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about {
-      background: var(--cream);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 75px;
-    }
-
-    .about-images {
-      position: relative;
-      min-height: 530px;
-    }
-
-    .about-main {
-      width: 82%;
-      height: 500px;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .about-main img {
-      height: 100%;
-    }
-
-    .about-small {
-      position: absolute;
-      right: 0;
-      bottom: 18px;
-      width: 45%;
-      height: 235px;
-      border-radius: 22px;
-      overflow: hidden;
-      border: 8px solid var(--cream);
-      box-shadow: var(--shadow);
-    }
-
-    .about-small img {
-      height: 100%;
-    }
-
-    .about-badge {
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      background: var(--orange);
-      color: white;
-      padding: 15px 18px;
-      border-radius: 17px;
-      box-shadow: var(--shadow);
-      font-weight: 800;
-      font-size: 13px;
-    }
-
-    .about-copy p {
-      color: var(--muted);
-      margin-bottom: 17px;
-    }
-
-    .check-list {
-      list-style: none;
-      margin: 28px 0;
-    }
-
-    .check-list li {
-      display: flex;
-      gap: 11px;
-      margin: 13px 0;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      width: 22px;
-      height: 22px;
-      flex: 0 0 22px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--green);
-      color: white;
-      font-size: 12px;
-    }
-
-    /* =========================
-       CATEGORIES
-    ========================= */
+    /* CATEGORIES */
 
     .category-grid {
       display: grid;
@@ -500,584 +368,390 @@
       gap: 18px;
     }
 
-    .category-card {
-      position: relative;
-      min-height: 280px;
-      border-radius: 22px;
+    .category {
+      min-height: 270px;
+      border-radius: var(--radius);
       overflow: hidden;
+      position: relative;
       color: white;
-      isolation: isolate;
+      display: flex;
+      align-items: end;
+      padding: 25px;
+      background-position: center;
+      background-size: cover;
+      transition: 0.3s ease;
     }
 
-    .category-card img {
-      height: 100%;
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      transition: transform .5s ease;
+    .category:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
     }
 
-    .category-card::after {
+    .category::after {
       content: "";
       position: absolute;
       inset: 0;
-      z-index: -1;
-      background: linear-gradient(transparent 25%, rgba(0,0,0,.82));
-    }
-
-    .category-card:hover img {
-      transform: scale(1.06);
+      background: linear-gradient(transparent 30%, rgba(0,0,0,0.78));
     }
 
     .category-content {
-      position: absolute;
-      bottom: 22px;
-      left: 21px;
-      right: 21px;
+      position: relative;
+      z-index: 2;
     }
 
-    .category-content h3 {
+    .category h3 {
       font-family: "Playfair Display", serif;
-      font-size: 24px;
-      margin-bottom: 4px;
+      font-size: 27px;
     }
 
-    .category-content p {
-      color: rgba(255,255,255,.78);
-      font-size: 12px;
-    }
-
-    /* =========================
-       PRODUCTS
-    ========================= */
-
-    .products {
-      background: var(--green-dark);
-      color: white;
-    }
-
-    .products .section-heading h2 {
-      color: white;
-    }
-
-    .products .section-heading p {
-      color: rgba(255,255,255,.68);
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .product-card {
-      background: white;
-      color: var(--text);
-      border-radius: 20px;
-      overflow: hidden;
-      transition: .3s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 18px 40px rgba(0,0,0,.18);
-    }
-
-    .product-image {
-      height: 220px;
-      overflow: hidden;
-    }
-
-    .product-image img {
-      height: 100%;
-      transition: transform .5s ease;
-    }
-
-    .product-card:hover .product-image img {
-      transform: scale(1.06);
-    }
-
-    .product-info {
-      padding: 20px;
-    }
-
-    .product-tag {
-      color: var(--orange-dark);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-    }
-
-    .product-info h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 21px;
-      margin: 5px 0;
-    }
-
-    .product-info p {
-      color: var(--muted);
+    .category p {
       font-size: 13px;
+      opacity: 0.88;
     }
 
-    /* =========================
-       WHY US
-    ========================= */
+    .produce {
+      background-image: url("https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .bakery {
+      background-image: url("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .pantry {
+      background-image: url("https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .drinks {
+      background-image: url("https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=85");
+    }
+
+    /* WHY US */
+
+    .why {
+      background: white;
+    }
 
     .why-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
     }
 
-    .why-card {
-      padding: 32px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      transition: .25s ease;
+    .why-image {
+      min-height: 560px;
+      border-radius: 30px;
+      background:
+        linear-gradient(rgba(18,60,50,0.12), rgba(18,60,50,0.12)),
+        url("https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=1200&q=90")
+        center/cover;
     }
 
-    .why-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
+    .feature-list {
+      display: grid;
+      gap: 23px;
+      margin-top: 32px;
     }
 
-    .why-icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 16px;
-      background: var(--green-light);
+    .feature {
+      display: flex;
+      gap: 17px;
+    }
+
+    .feature-icon {
+      flex: 0 0 50px;
+      width: 50px;
+      height: 50px;
+      background: #e7f0eb;
+      color: var(--green);
+      border-radius: 15px;
       display: grid;
       place-items: center;
-      font-size: 25px;
-      margin-bottom: 20px;
+      font-size: 21px;
     }
 
-    .why-card h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--green-dark);
-      font-size: 23px;
-      margin-bottom: 8px;
+    .feature h3 {
+      color: var(--green);
+      margin-bottom: 3px;
+      font-size: 17px;
     }
 
-    .why-card p {
+    .feature p {
       color: var(--muted);
       font-size: 14px;
     }
 
-    /* =========================
-       LOCATION / HOURS
-    ========================= */
+    /* VISIT */
 
     .visit {
-      background: var(--cream);
-    }
-
-    .visit-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
+      padding: 90px 0;
     }
 
     .visit-card {
-      border-radius: 25px;
-      overflow: hidden;
-      background: white;
-      box-shadow: var(--shadow);
-    }
-
-    .map-placeholder {
-      min-height: 380px;
-      background:
-        linear-gradient(rgba(23,77,53,.78), rgba(13,51,35,.88)),
-        url("https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=1200&q=80")
-        center/cover;
+      background: var(--green);
+      border-radius: 30px;
+      padding: 60px;
       color: white;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px;
     }
 
-    .map-content .map-icon {
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
-
-    .map-content h3 {
+    .visit h2 {
       font-family: "Playfair Display", serif;
-      font-size: 30px;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+      margin-bottom: 18px;
     }
 
-    .map-content p {
-      color: rgba(255,255,255,.78);
-      margin: 8px 0 20px;
+    .visit p {
+      color: #c7ddd5;
+      max-width: 520px;
     }
 
-    .hours {
-      padding: 38px;
+    .contact-box {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 22px;
+      padding: 30px;
     }
 
-    .hours h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--green-dark);
-      font-size: 32px;
-      margin-bottom: 22px;
-    }
-
-    .hours-list {
-      list-style: none;
-    }
-
-    .hours-list li {
+    .contact-row {
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
+      gap: 15px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
     }
 
-    .hours-list li:last-child {
+    .contact-row:last-child {
       border-bottom: 0;
     }
 
-    .hours-list span:last-child {
-      font-weight: 700;
-      color: var(--green);
+    .contact-row strong {
+      display: block;
     }
 
-    /* =========================
-       CTA
-    ========================= */
-
-    .cta {
-      padding: 80px 0;
+    .contact-row span {
+      display: block;
+      color: #c7ddd5;
+      font-size: 14px;
     }
 
-    .cta-box {
-      position: relative;
-      overflow: hidden;
+    /* CTA */
+
+    .final-cta {
+      padding: 0 0 90px;
+    }
+
+    .cta-card {
       border-radius: 30px;
-      padding: 65px;
       background:
-        linear-gradient(110deg, rgba(13,51,35,.96), rgba(23,77,53,.89)),
-        url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1500&q=80")
+        linear-gradient(90deg, rgba(233,139,58,0.95), rgba(201,108,34,0.88)),
+        url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=80")
         center/cover;
+      padding: 65px;
       color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
+      text-align: center;
     }
 
-    .cta-box h2 {
+    .cta-card h2 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(32px, 4vw, 50px);
-      line-height: 1.1;
-      margin-bottom: 10px;
+      font-size: clamp(36px, 5vw, 60px);
+      line-height: 1;
+      margin-bottom: 15px;
     }
 
-    .cta-box p {
-      color: rgba(255,255,255,.75);
-      max-width: 560px;
+    .cta-card p {
+      max-width: 620px;
+      margin: 0 auto 28px;
+      color: rgba(255,255,255,0.9);
     }
 
-    .cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
-      background: #091d13;
+      background: #071f1a;
       color: white;
-      padding: 70px 0 25px;
+      padding: 55px 0 25px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 45px;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
       padding-bottom: 45px;
     }
 
-    footer .logo-text strong {
-      color: white;
+    footer h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      margin-bottom: 12px;
     }
 
-    .footer-brand p {
-      color: rgba(255,255,255,.58);
-      font-size: 13px;
-      max-width: 320px;
-      margin-top: 17px;
-    }
-
-    .footer-column h4 {
-      margin-bottom: 17px;
+    footer p,
+    footer a {
+      color: #a9c0b8;
       font-size: 14px;
     }
 
-    .footer-column ul {
-      list-style: none;
-    }
-
-    .footer-column li {
-      margin: 9px 0;
-    }
-
-    .footer-column a,
-    .footer-column span {
-      color: rgba(255,255,255,.58);
-      font-size: 13px;
-    }
-
-    .footer-column a:hover {
+    footer a:hover {
       color: white;
     }
 
-    .copyright {
-      border-top: 1px solid rgba(255,255,255,.1);
-      padding-top: 22px;
-      color: rgba(255,255,255,.4);
-      font-size: 12px;
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      font-size: 12px;
+      color: #78928a;
     }
 
-    /* =========================
-       REVEAL ANIMATION
-    ========================= */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(25px);
-      transition: .7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 900px) {
-
       .nav-links {
+        display: none;
         position: absolute;
-        top: 82px;
-        left: 0;
-        right: 0;
+        left: 4%;
+        right: 4%;
+        top: 74px;
         background: white;
         padding: 20px;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
         flex-direction: column;
         align-items: stretch;
-        gap: 0;
-        border-bottom: 1px solid var(--border);
-        box-shadow: 0 15px 30px rgba(0,0,0,.08);
-        display: none;
       }
 
-      .nav-links.active {
+      .nav-links.show {
         display: flex;
       }
 
-      .nav-links li {
-        border-bottom: 1px solid var(--border);
-      }
-
-      .nav-links li:last-child {
-        border-bottom: 0;
-      }
-
-      .nav-links a {
-        display: block;
-        padding: 14px 4px;
-      }
-
-      .menu-btn {
+      .mobile-menu {
         display: block;
       }
 
-      .nav-cta {
-        display: inline-block !important;
-        text-align: center;
-        margin-top: 10px;
-      }
-
-      .trust-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .trust-item:nth-child(2) {
-        border-right: 0;
-      }
-
-      .trust-item:nth-child(3),
-      .trust-item:nth-child(4) {
-        border-top: 1px solid var(--border);
-      }
-
-      .category-grid,
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .about-grid,
-      .visit-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-images {
-        min-height: 500px;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .cta-box {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 45px 35px;
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      .container {
-        width: min(100% - 28px, 1160px);
-      }
-
-      .topbar {
-        display: none;
-      }
-
-      nav {
-        min-height: 72px;
-      }
-
-      .nav-links {
-        top: 72px;
-      }
-
-      .hero {
+      .hero-card {
         min-height: 650px;
       }
 
       .hero-content {
-        padding: 65px 0;
+        padding: 45px 30px;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .why-grid,
+      .visit-card {
+        grid-template-columns: 1fr;
+      }
+
+      .why-image {
+        min-height: 420px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .topbar-inner span {
+        display: none;
+      }
+
+      nav {
+        height: 72px;
+      }
+
+      .logo-mark {
+        width: 42px;
+        height: 42px;
+      }
+
+      .logo-text strong {
+        font-size: 18px;
+      }
+
+      .hero {
+        padding-top: 15px;
+      }
+
+      .hero-card {
+        min-height: 690px;
+        border-radius: 25px;
+        background-position: 62% center;
+      }
+
+      .hero-content {
+        padding: 35px 22px;
       }
 
       .hero h1 {
-        font-size: 48px;
+        font-size: 52px;
+        letter-spacing: -2px;
       }
 
       .hero p {
-        font-size: 15px;
+        font-size: 16px;
       }
 
-      .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn {
+      .hero-buttons,
+      .hero-buttons .btn {
         width: 100%;
       }
 
-      .trust-strip {
-        margin-top: -25px;
+      .quote-box {
+        padding: 40px 25px;
       }
 
-      .trust-grid {
+      .section {
+        padding: 65px 0;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-intro {
+        margin-top: 18px;
+      }
+
+      .category-grid {
         grid-template-columns: 1fr;
       }
 
-      .trust-item {
-        border-right: 0;
-        border-bottom: 1px solid var(--border);
+      .category {
+        min-height: 230px;
       }
 
-      .trust-item:last-child {
-        border-bottom: 0;
+      .why-image {
+        min-height: 350px;
       }
 
-      section {
-        padding: 75px 0;
+      .visit-card {
+        padding: 35px 22px;
       }
 
-      .category-grid,
-      .product-grid,
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .category-card {
-        min-height: 300px;
-      }
-
-      .about-images {
-        min-height: 390px;
-      }
-
-      .about-main {
-        width: 88%;
-        height: 380px;
-      }
-
-      .about-small {
-        height: 175px;
-        width: 47%;
-      }
-
-      .about-badge {
-        top: 18px;
-        right: 15px;
-      }
-
-      .map-placeholder {
-        min-height: 300px;
-      }
-
-      .hours {
-        padding: 28px 22px;
-      }
-
-      .hours-list li {
-        font-size: 12px;
-      }
-
-      .cta-box {
-        padding: 38px 25px;
-      }
-
-      .cta-actions {
-        width: 100%;
-        flex-direction: column;
+      .cta-card {
+        padding: 45px 22px;
       }
 
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
       }
 
-      .copyright {
+      .footer-bottom {
         flex-direction: column;
       }
     }
@@ -1086,763 +760,346 @@
 
 <body>
 
-  <!-- TOP BAR -->
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="topbar-left">
-        <span>📍 Gananoque, Ontario</span>
-        <span>Fresh groceries. Friendly service.</span>
-      </div>
-
-      <div class="topbar-right">
-        <span>🛒 Local grocery shopping</span>
-      </div>
+      <span>LOCAL • CONVENIENT • EVERYDAY ESSENTIALS</span>
+      <a href="tel:+16133823548">Call White's Grocery · 613-382-3548</a>
     </div>
   </div>
 
-  <!-- NAVIGATION -->
   <header>
     <div class="container">
       <nav>
-
-        <a href="#home" class="logo">
-          <div class="logo-icon">W</div>
-
+        <a href="#" class="logo">
+          <div class="logo-mark">W</div>
           <div class="logo-text">
             <strong>White's Grocery</strong>
-            <small>FRESH • LOCAL • EVERYDAY</small>
+            <span>FRESH · LOCAL · EVERYDAY</span>
           </div>
         </a>
 
-        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#categories">Shop</a>
+          <a href="#about">Why White's</a>
+          <a href="#visit">Visit Us</a>
+          <a class="nav-cta" href="tel:+16133823548">Call Us</a>
+        </div>
+
+        <button class="mobile-menu" onclick="toggleMenu()" aria-label="Open menu">
           ☰
         </button>
-
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#departments">Departments</a></li>
-          <li><a href="#products">Featured</a></li>
-          <li><a href="#visit">Visit Us</a></li>
-          <li>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=White's%20Grocery%20Gananoque%20Ontario"
-              target="_blank"
-              class="nav-cta"
-            >
-              Get Directions →
-            </a>
-          </li>
-        </ul>
-
       </nav>
     </div>
   </header>
 
-
-  <!-- HERO -->
   <main>
 
     <section class="hero" id="home">
-
       <div class="container">
+        <div class="hero-card">
 
-        <div class="hero-content reveal">
+          <div class="hero-content">
 
-          <div class="eyebrow">
-            Your neighbourhood grocery destination
-          </div>
-
-          <h1>
-            Fresh choices.<br>
-            <span>Everyday essentials.</span>
-          </h1>
-
-          <p>
-            Welcome to White's Grocery — a friendly local shopping
-            destination in Gananoque, Ontario. Discover everyday
-            essentials, fresh food and the products your household needs.
-          </p>
-
-          <div class="hero-buttons">
-
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=White's%20Grocery%20Gananoque%20Ontario"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              📍 Get Directions
-            </a>
-
-            <a href="#departments" class="btn btn-outline">
-              Explore Our Store
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- TRUST STRIP -->
-    <div class="trust-strip">
-
-      <div class="container">
-
-        <div class="trust-grid reveal">
-
-          <div class="trust-item">
-            <div class="trust-icon">🥬</div>
-            <div>
-              <strong>Fresh Selection</strong>
-              <span>Quality food & essentials</span>
-            </div>
-          </div>
-
-          <div class="trust-item">
-            <div class="trust-icon">🛒</div>
-            <div>
-              <strong>Everyday Essentials</strong>
-              <span>Everything for your home</span>
-            </div>
-          </div>
-
-          <div class="trust-item">
-            <div class="trust-icon">🤝</div>
-            <div>
-              <strong>Friendly Service</strong>
-              <span>A local shopping experience</span>
-            </div>
-          </div>
-
-          <div class="trust-item">
-            <div class="trust-icon">📍</div>
-            <div>
-              <strong>Local & Convenient</strong>
-              <span>Serving the community</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-
-      <div class="container">
-
-        <div class="about-grid">
-
-          <div class="about-images reveal">
-
-            <div class="about-main">
-              <img
-                src="https://images.unsplash.com/photo-1579113800032-c38bd7635818?auto=format&fit=crop&w=1000&q=85"
-                alt="Fresh groceries"
-              >
+            <div class="eyebrow">
+              Your neighbourhood grocery destination
             </div>
 
-            <div class="about-small">
-              <img
-                src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=85"
-                alt="Fresh produce in a grocery store"
-              >
-            </div>
-
-            <div class="about-badge">
-              FRESH EVERY DAY ✦
-            </div>
-
-          </div>
-
-
-          <div class="about-copy reveal">
-
-            <div class="section-label">About White's Grocery</div>
-
-            <h2 class="section-heading" style="margin-bottom:18px;">
-              Your local stop for the things you need.
-            </h2>
+            <h1>
+              Fresh choices.<br>
+              <span>Everyday essentials.</span>
+            </h1>
 
             <p>
-              Grocery shopping should be simple, convenient and welcoming.
-              White's Grocery is designed around that idea — helping local
-              shoppers find everyday food and household essentials without
-              the stress of a complicated shopping trip.
+              Good food starts close to home. Discover a convenient local
+              grocery destination in Gananoque for the things you need,
+              whenever you need them.
             </p>
 
-            <p>
-              From fresh ingredients to pantry staples, our goal is to make
-              your next grocery run easy and enjoyable.
-            </p>
+            <div class="hero-buttons">
+              <a
+                class="btn btn-primary"
+                href="https://www.google.com/maps/search/?api=1&query=White%27s%20Grocery%2091%20Stone%20St%20N%20Gananoque%20ON"
+                target="_blank"
+              >
+                📍 Get Directions
+              </a>
 
-            <ul class="check-list">
-              <li>Fresh food and grocery essentials</li>
-              <li>Convenient local shopping</li>
-              <li>Friendly customer experience</li>
-              <li>A store built around the community</li>
-            </ul>
-
-            <a href="#visit" class="btn btn-primary">
-              Plan Your Visit →
-            </a>
+              <a class="btn btn-light" href="#categories">
+                Explore Our Store →
+              </a>
+            </div>
 
           </div>
 
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- DEPARTMENTS -->
-    <section id="departments">
-
+    <section class="quote">
       <div class="container">
-
-        <div class="section-heading center reveal">
-
-          <div class="section-label">
-            Explore Our Store
-          </div>
-
-          <h2>
-            Something for every shopping trip.
-          </h2>
-
+        <div class="quote-box">
           <p>
-            Browse some of the everyday categories shoppers can discover
-            at their local grocery destination.
+            “Good food brings people together —
+            and it starts right here.”
           </p>
 
+          <small>White's Grocery · Gananoque</small>
         </div>
+      </div>
+    </section>
 
+    <section class="section" id="categories">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Explore the essentials</div>
+            <h2>Something for<br>everyday life.</h2>
+          </div>
+
+          <p class="section-intro">
+            From fresh food to everyday necessities, White's Grocery is
+            designed around convenient local shopping.
+          </p>
+        </div>
 
         <div class="category-grid">
 
-          <article class="category-card reveal">
-            <img
-              src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85"
-              alt="Fresh produce"
-            >
-
+          <a class="category produce" href="#visit">
             <div class="category-content">
               <h3>Fresh Produce</h3>
-              <p>Colourful ingredients for everyday meals.</p>
+              <p>Fresh choices for your kitchen.</p>
             </div>
-          </article>
+          </a>
 
-
-          <article class="category-card reveal">
-            <img
-              src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85"
-              alt="Fresh bakery products"
-            >
-
+          <a class="category bakery" href="#visit">
             <div class="category-content">
               <h3>Bakery</h3>
-              <p>Great options for breakfast and beyond.</p>
+              <p>Everyday favourites for the table.</p>
             </div>
-          </article>
+          </a>
 
-
-          <article class="category-card reveal">
-            <img
-              src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=85"
-              alt="Dairy products"
-            >
-
-            <div class="category-content">
-              <h3>Dairy & Chilled</h3>
-              <p>Everyday refrigerated favourites.</p>
-            </div>
-          </article>
-
-
-          <article class="category-card reveal">
-            <img
-              src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=900&q=85"
-              alt="Grocery shelves"
-            >
-
+          <a class="category pantry" href="#visit">
             <div class="category-content">
               <h3>Pantry Essentials</h3>
-              <p>Staples for your kitchen and home.</p>
+              <p>The things your household needs.</p>
             </div>
-          </article>
+          </a>
+
+          <a class="category drinks" href="#visit">
+            <div class="category-content">
+              <h3>Drinks & More</h3>
+              <p>Pick up something for the journey.</p>
+            </div>
+          </a>
 
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- FEATURED PRODUCTS -->
-    <section class="products" id="products">
-
+    <section class="section why" id="about">
       <div class="container">
-
-        <div class="section-heading center reveal">
-
-          <div class="section-label">
-            Store Favourites
-          </div>
-
-          <h2>
-            Everyday essentials.
-          </h2>
-
-          <p>
-            A visual showcase of popular grocery categories for the
-            website concept.
-          </p>
-
-        </div>
-
-
-        <div class="product-grid">
-
-          <article class="product-card reveal">
-
-            <div class="product-image">
-              <img
-                src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=700&q=85"
-                alt="Fresh fruit"
-              >
-            </div>
-
-            <div class="product-info">
-              <span class="product-tag">Fresh</span>
-              <h3>Fresh Fruits</h3>
-              <p>Perfect for snacks, breakfasts and everyday meals.</p>
-            </div>
-
-          </article>
-
-
-          <article class="product-card reveal">
-
-            <div class="product-image">
-              <img
-                src="https://images.unsplash.com/photo-1518843875459-f738682238a6?auto=format&fit=crop&w=700&q=85"
-                alt="Fresh vegetables"
-              >
-            </div>
-
-            <div class="product-info">
-              <span class="product-tag">Produce</span>
-              <h3>Fresh Vegetables</h3>
-              <p>Colourful ingredients for healthy home cooking.</p>
-            </div>
-
-          </article>
-
-
-          <article class="product-card reveal">
-
-            <div class="product-image">
-              <img
-                src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=700&q=85"
-                alt="Bread and bakery"
-              >
-            </div>
-
-            <div class="product-info">
-              <span class="product-tag">Bakery</span>
-              <h3>Bakery Favourites</h3>
-              <p>Simple staples for breakfast and everyday meals.</p>
-            </div>
-
-          </article>
-
-
-          <article class="product-card reveal">
-
-            <div class="product-image">
-              <img
-                src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=700&q=85"
-                alt="Groceries and ingredients"
-              >
-            </div>
-
-            <div class="product-info">
-              <span class="product-tag">Essentials</span>
-              <h3>Kitchen Staples</h3>
-              <p>Useful ingredients for the meals you make at home.</p>
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- WHY CHOOSE US -->
-    <section>
-
-      <div class="container">
-
-        <div class="section-heading center reveal">
-
-          <div class="section-label">
-            The Local Difference
-          </div>
-
-          <h2>
-            Why shoppers choose local.
-          </h2>
-
-          <p>
-            A great grocery experience is about more than what's on the
-            shelves.
-          </p>
-
-        </div>
-
 
         <div class="why-grid">
 
-          <article class="why-card reveal">
-            <div class="why-icon">🌱</div>
-            <h3>Fresh & Practical</h3>
-            <p>
-              Find useful ingredients and everyday essentials for the
-              meals and routines that matter.
-            </p>
-          </article>
+          <div class="why-image"></div>
 
+          <div>
+            <div class="section-kicker">Why shop local?</div>
 
-          <article class="why-card reveal">
-            <div class="why-icon">❤️</div>
-            <h3>Community Focused</h3>
-            <p>
-              Local businesses help create the friendly character that
-              makes a community feel like home.
-            </p>
-          </article>
+            <h2>
+              Your neighbourhood.
+              Your essentials.
+              Your store.
+            </h2>
 
+            <div class="feature-list">
 
-          <article class="why-card reveal">
-            <div class="why-icon">⚡</div>
-            <h3>Simple Shopping</h3>
-            <p>
-              A convenient local option can make your everyday grocery
-              run faster and easier.
-            </p>
-          </article>
+              <div class="feature">
+                <div class="feature-icon">✓</div>
 
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- VISIT -->
-    <section class="visit" id="visit">
-
-      <div class="container">
-
-        <div class="section-heading center reveal">
-
-          <div class="section-label">
-            Visit White's Grocery
-          </div>
-
-          <h2>
-            Come shop with us.
-          </h2>
-
-          <p>
-            Find White's Grocery in Gananoque, Ontario.
-          </p>
-
-        </div>
-
-
-        <div class="visit-grid">
-
-          <div class="visit-card reveal">
-
-            <div class="map-placeholder">
-
-              <div class="map-content">
-
-                <div class="map-icon">📍</div>
-
-                <h3>Gananoque, Ontario</h3>
-
-                <p>
-                  Find White's Grocery and plan your route.
-                </p>
-
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=White's%20Grocery%20Gananoque%20Ontario"
-                  target="_blank"
-                  class="btn btn-light"
-                >
-                  Open Google Maps →
-                </a>
-
+                <div>
+                  <h3>Convenient local shopping</h3>
+                  <p>
+                    Get everyday essentials without making a long trip.
+                  </p>
+                </div>
               </div>
 
+              <div class="feature">
+                <div class="feature-icon">♡</div>
+
+                <div>
+                  <h3>A friendly local feel</h3>
+                  <p>
+                    A neighbourhood store built around convenient everyday shopping.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <div class="feature-icon">★</div>
+
+                <div>
+                  <h3>Made for everyday life</h3>
+                  <p>
+                    From last-minute needs to everyday grocery runs,
+                    keep your shopping simple.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="container">
+
+        <div class="visit-card">
+
+          <div>
+            <div class="section-kicker">Come visit us</div>
+
+            <h2>
+              Fresh choices are
+              closer than you think.
+            </h2>
+
+            <p>
+              Stop by White's Grocery in Gananoque and make your next
+              grocery run simple and convenient.
+            </p>
+
+            <br>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.google.com/maps/search/?api=1&query=White%27s%20Grocery%2091%20Stone%20St%20N%20Gananoque%20ON"
+              target="_blank"
+            >
+              Get Directions →
+            </a>
+          </div>
+
+          <div class="contact-box">
+
+            <div class="contact-row">
+              <div>📍</div>
+              <div>
+                <strong>Find us</strong>
+                <span>91 Stone St N, Gananoque, ON K7G 1Y1</span>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div>☎</div>
+              <div>
+                <strong>Give us a call</strong>
+                <span>
+                  <a href="tel:+16133823548">613-382-3548</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div>🛒</div>
+              <div>
+                <strong>Local convenience</strong>
+                <span>Your neighbourhood grocery destination</span>
+              </div>
             </div>
 
           </div>
 
-
-          <div class="visit-card hours reveal">
-
-            <h3>Store Information</h3>
-
-            <ul class="hours-list">
-
-              <li>
-                <span>Location</span>
-                <span>Gananoque, ON</span>
-              </li>
-
-              <li>
-                <span>Shopping</span>
-                <span>In-store</span>
-              </li>
-
-              <li>
-                <span>Community</span>
-                <span>Local</span>
-              </li>
-
-              <li>
-                <span>Directions</span>
-                <span>Google Maps</span>
-              </li>
-
-            </ul>
-
-            <br>
-
-            <p style="color:var(--muted);font-size:13px;">
-              Store hours and contact details can be added here once
-              confirmed with the business.
-            </p>
-
-            <br>
-
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=White's%20Grocery%20Gananoque%20Ontario"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              Get Directions
-            </a>
-
-          </div>
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- CTA -->
-    <section class="cta">
-
+    <section class="final-cta">
       <div class="container">
 
-        <div class="cta-box reveal">
+        <div class="cta-card">
 
-          <div>
-            <h2>
-              Your next grocery run starts here.
-            </h2>
+          <h2>
+            Your next grocery run<br>
+            starts here.
+          </h2>
 
-            <p>
-              Discover a convenient local shopping experience in
-              Gananoque, Ontario.
-            </p>
-          </div>
+          <p>
+            Fresh choices, everyday essentials and the convenience
+            of shopping close to home.
+          </p>
 
-          <div class="cta-actions">
-
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=White's%20Grocery%20Gananoque%20Ontario"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              📍 Find Us
-            </a>
-
-            <a href="#home" class="btn btn-outline">
-              Back to Top ↑
-            </a>
-
-          </div>
+          <a
+            class="btn btn-light"
+            href="tel:+16133823548"
+          >
+            Call White's Grocery
+          </a>
 
         </div>
 
       </div>
-
     </section>
 
   </main>
 
-
-  <!-- FOOTER -->
   <footer>
 
     <div class="container">
 
       <div class="footer-grid">
 
-        <div class="footer-brand">
-
-          <a href="#home" class="logo">
-
-            <div class="logo-icon">W</div>
-
-            <div class="logo-text">
-              <strong>White's Grocery</strong>
-              <small>FRESH • LOCAL • EVERYDAY</small>
-            </div>
-
-          </a>
-
+        <div>
+          <h3>White's Grocery</h3>
           <p>
-            A modern website concept designed to give White's Grocery
-            a stronger online presence.
+            Fresh choices. Local heart. Everyday essentials.
           </p>
-
         </div>
 
-
-        <div class="footer-column">
-
-          <h4>Explore</h4>
-
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#departments">Departments</a></li>
-            <li><a href="#products">Featured</a></li>
-          </ul>
-
+        <div>
+          <h3>Visit</h3>
+          <p>
+            91 Stone St N<br>
+            Gananoque, ON K7G 1Y1
+          </p>
         </div>
 
-
-        <div class="footer-column">
-
-          <h4>Visit</h4>
-
-          <ul>
-            <li><a href="#visit">Location</a></li>
-            <li><a href="#visit">Store Information</a></li>
-            <li><a href="https://www.google.com/maps/search/?api=1&query=White's%20Grocery%20Gananoque%20Ontario" target="_blank">Google Maps</a></li>
-          </ul>
-
-        </div>
-
-
-        <div class="footer-column">
-
-          <h4>White's Grocery</h4>
-
-          <ul>
-            <li><span>Gananoque, Ontario</span></li>
-            <li><span>Local grocery shopping</span></li>
-            <li><span>Fresh food & essentials</span></li>
-          </ul>
-
+        <div>
+          <h3>Contact</h3>
+          <p>
+            <a href="tel:+16133823548">
+              613-382-3548
+            </a>
+          </p>
         </div>
 
       </div>
 
-
-      <div class="copyright">
-
-        <span>
-          © <span id="year"></span> White's Grocery. Website concept by Ola Web Studio.
-        </span>
-
-        <span>
-          Designed with care.
-        </span>
-
+      <div class="footer-bottom">
+        <span>© 2026 White's Grocery. All rights reserved.</span>
+        <span>Designed as a website concept.</span>
       </div>
 
     </div>
 
   </footer>
 
-
   <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
 
-    /* MOBILE MENU */
-
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-
-      if (navLinks.classList.contains("active")) {
-        menuBtn.textContent = "✕";
-      } else {
-        menuBtn.textContent = "☰";
-      }
-    });
-
-
-    /* CLOSE MOBILE MENU WHEN LINK IS CLICKED */
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuBtn.textContent = "☰";
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("navLinks").classList.remove("show");
       });
     });
-
-
-    /* REVEAL ANIMATION */
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-
-        });
-      },
-      {
-        threshold: 0.12
-      }
-    );
-
-
-    document.querySelectorAll(".reveal").forEach(element => {
-      observer.observe(element);
-    });
-
-
-    /* CURRENT YEAR */
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
   </script>
 
 </body>
