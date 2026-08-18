@@ -1,15 +1,15 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>White's Grocery | Fresh Choices. Local Heart.</title>
+  <title>White's Grocery | Fresh. Local. Everyday.</title>
 
   <meta
     name="description"
-    content="White's Grocery in Gananoque, Ontario — a convenient local destination for everyday essentials and grocery needs."
-  >
+    content="White's Grocery — a convenient local grocery destination in Gananoque, Ontario."
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,21 +17,21 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
     rel="stylesheet"
-  >
+  />
 
   <style>
     :root {
-      --green: #123c32;
-      --green-dark: #092a23;
-      --green-light: #1d5949;
-      --cream: #f8f4ea;
+      --green: #173d32;
+      --green-dark: #0d2a22;
+      --green-light: #eaf2ed;
+      --cream: #faf7f0;
       --white: #ffffff;
-      --orange: #e98b3a;
-      --orange-dark: #c96c22;
-      --text: #17231f;
-      --muted: #66736d;
-      --border: rgba(18, 60, 50, 0.12);
-      --shadow: 0 20px 60px rgba(9, 42, 35, 0.12);
+      --orange: #e9823b;
+      --orange-dark: #c96527;
+      --text: #203029;
+      --muted: #68736d;
+      --border: #e6e4dc;
+      --shadow: 0 20px 60px rgba(19, 48, 39, 0.12);
       --radius: 24px;
     }
 
@@ -47,14 +47,9 @@
 
     body {
       font-family: "DM Sans", sans-serif;
-      color: var(--text);
       background: var(--cream);
+      color: var(--text);
       line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
     }
 
     img {
@@ -62,305 +57,403 @@
       display: block;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
     .container {
-      width: min(1180px, 92%);
+      width: min(1160px, calc(100% - 40px));
       margin: auto;
     }
 
-    /* TOP BAR */
+    /* =========================
+       TOP BAR
+    ========================== */
 
     .topbar {
       background: var(--green-dark);
       color: white;
+      padding: 10px 20px;
       font-size: 13px;
-      padding: 10px 0;
+      font-weight: 600;
     }
 
     .topbar-inner {
+      max-width: 1160px;
+      margin: auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
     }
 
-    .topbar a {
-      color: #ffd9a9;
+    .topbar-message {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .topbar-phone {
+      color: #ffd3ad;
       font-weight: 700;
     }
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+    ========================== */
 
     header {
+      background: rgba(250, 247, 240, 0.96);
+      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(248, 244, 234, 0.94);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
     }
 
-    nav {
-      height: 82px;
+    .nav {
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 30px;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
-    .logo-mark {
-      width: 46px;
-      height: 46px;
-      border-radius: 15px;
-      background: var(--green);
-      color: white;
+    .brand-mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
       display: grid;
       place-items: center;
+      background: var(--green);
+      color: white;
       font-family: "Playfair Display", serif;
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 800;
+      box-shadow: 0 8px 20px rgba(23, 61, 50, 0.18);
     }
 
-    .logo-text strong {
-      display: block;
+    .brand-name {
       font-family: "Playfair Display", serif;
-      font-size: 21px;
-      line-height: 1;
+      font-size: 24px;
+      font-weight: 800;
       color: var(--green);
     }
 
-    .logo-text span {
+    .brand-tagline {
+      display: block;
+      color: var(--orange);
       font-size: 10px;
-      letter-spacing: 3px;
-      color: var(--orange-dark);
-      font-weight: 800;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      margin-top: 2px;
     }
 
-    .nav-links {
+    .desktop-nav {
       display: flex;
       align-items: center;
-      gap: 30px;
-      font-size: 14px;
-      font-weight: 700;
+      gap: 28px;
     }
 
-    .nav-links a:hover {
+    .desktop-nav a {
+      font-size: 14px;
+      font-weight: 700;
+      color: #40504a;
+      transition: 0.2s ease;
+    }
+
+    .desktop-nav a:hover {
       color: var(--orange-dark);
     }
 
-    .nav-cta {
+    .nav-button {
+      padding: 12px 18px;
+      border-radius: 999px;
       background: var(--orange);
       color: white !important;
-      padding: 12px 19px;
-      border-radius: 999px;
     }
+
+    .nav-button:hover {
+      background: var(--orange-dark);
+      transform: translateY(-1px);
+    }
+
+    .menu-button {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--green);
+      color: white;
+      cursor: pointer;
+      font-size: 23px;
+    }
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
 
     .mobile-menu {
       display: none;
-      border: 0;
-      background: var(--green);
-      color: white;
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      font-size: 22px;
-      cursor: pointer;
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 14px 20px 24px;
+      box-shadow: 0 18px 35px rgba(0,0,0,0.08);
     }
 
-    /* HERO */
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 14px 8px;
+      border-bottom: 1px solid #eee;
+      font-weight: 700;
+    }
+
+    .mobile-menu .mobile-call {
+      margin-top: 15px;
+      text-align: center;
+      background: var(--orange);
+      color: white;
+      border-radius: 14px;
+      border: 0;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
 
     .hero {
-      padding: 28px 0 80px;
-    }
-
-    .hero-card {
-      min-height: 650px;
-      border-radius: 34px;
-      overflow: hidden;
       position: relative;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
       background:
         linear-gradient(
           90deg,
-          rgba(5, 31, 25, 0.94) 0%,
-          rgba(5, 31, 25, 0.72) 42%,
-          rgba(5, 31, 25, 0.16) 100%
+          rgba(8, 28, 22, 0.96) 0%,
+          rgba(8, 28, 22, 0.82) 42%,
+          rgba(8, 28, 22, 0.28) 100%
         ),
-        url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1800&q=90")
-        center/cover;
-      box-shadow: var(--shadow);
-      display: flex;
-      align-items: center;
+        url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 80% 30%, rgba(233,130,59,0.18), transparent 28%),
+        linear-gradient(to bottom, transparent 75%, rgba(0,0,0,0.25));
+      pointer-events: none;
     }
 
     .hero-content {
+      position: relative;
+      z-index: 2;
       color: white;
-      max-width: 680px;
-      padding: 70px;
+      max-width: 720px;
+      padding: 90px 0;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.22);
-      padding: 9px 14px;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 11px;
+      gap: 10px;
+      color: #ffd0aa;
+      font-size: 13px;
       font-weight: 800;
-      margin-bottom: 25px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
     }
 
     .eyebrow::before {
       content: "";
-      width: 7px;
-      height: 7px;
-      background: #ffd28f;
-      border-radius: 50%;
+      width: 38px;
+      height: 2px;
+      background: var(--orange);
     }
 
     .hero h1 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(48px, 7vw, 86px);
+      font-size: clamp(52px, 7vw, 86px);
       line-height: 0.98;
-      letter-spacing: -3px;
-      margin-bottom: 25px;
+      letter-spacing: -0.04em;
+      margin-bottom: 26px;
     }
 
     .hero h1 span {
-      color: #ffb15c;
+      color: #f3a267;
     }
 
-    .hero p {
-      max-width: 590px;
-      font-size: 18px;
+    .hero-text {
+      max-width: 620px;
+      font-size: 19px;
       color: rgba(255,255,255,0.88);
       margin-bottom: 34px;
     }
 
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
+    .hero-quote {
+      border-left: 3px solid var(--orange);
+      padding-left: 18px;
+      margin-bottom: 36px;
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      font-style: italic;
+      color: #fff4e9;
     }
 
-    .btn {
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-      padding: 15px 23px;
+      min-height: 54px;
+      padding: 0 25px;
       border-radius: 999px;
       font-weight: 800;
+      font-size: 14px;
       transition: 0.25s ease;
+      cursor: pointer;
     }
 
-    .btn-primary {
+    .button-primary {
       background: var(--orange);
       color: white;
+      box-shadow: 0 12px 30px rgba(233,130,59,0.28);
     }
 
-    .btn-primary:hover {
+    .button-primary:hover {
       background: var(--orange-dark);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
-    .btn-light {
+    .button-outline {
+      border: 1px solid rgba(255,255,255,0.45);
+      color: white;
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(10px);
+    }
+
+    .button-outline:hover {
       background: white;
       color: var(--green);
+      transform: translateY(-3px);
     }
 
-    .btn-light:hover {
-      transform: translateY(-2px);
+    /* =========================
+       TRUST STRIP
+    ========================== */
+
+    .trust-strip {
+      background: white;
+      border-bottom: 1px solid var(--border);
     }
 
-    /* QUOTE */
-
-    .quote {
-      padding: 10px 0 90px;
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
     }
 
-    .quote-box {
-      background: var(--green);
-      color: white;
-      border-radius: var(--radius);
-      padding: 55px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .quote-box::before {
-      content: "“";
-      position: absolute;
-      font-family: "Playfair Display", serif;
-      font-size: 180px;
-      opacity: 0.08;
-      left: 30px;
-      top: -50px;
-    }
-
-    .quote-box p {
-      max-width: 850px;
-      margin: auto;
-      font-family: "Playfair Display", serif;
-      font-size: clamp(28px, 4vw, 46px);
-      line-height: 1.18;
-      position: relative;
-    }
-
-    .quote-box small {
-      display: block;
-      margin-top: 20px;
-      color: #b9d6cc;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    /* SECTION HEAD */
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .section-head {
+    .trust-item {
+      padding: 24px 25px;
       display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 30px;
-      margin-bottom: 40px;
+      align-items: center;
+      gap: 14px;
+      border-right: 1px solid var(--border);
     }
 
-    .section-kicker {
-      color: var(--orange-dark);
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      font-size: 11px;
-      font-weight: 900;
-      margin-bottom: 10px;
+    .trust-item:last-child {
+      border-right: 0;
     }
 
-    .section h2 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(36px, 5vw, 58px);
-      line-height: 1;
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      border-radius: 14px;
+      background: var(--green-light);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 14px;
       color: var(--green);
     }
 
-    .section-intro {
-      max-width: 430px;
+    .trust-item span {
+      font-size: 12px;
       color: var(--muted);
     }
 
-    /* CATEGORIES */
+    /* =========================
+       SECTION BASICS
+    ========================== */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    .section-label {
+      color: var(--orange-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* =========================
+       CATEGORIES
+    ========================== */
+
+    .categories {
+      background: var(--cream);
+    }
 
     .category-grid {
       display: grid;
@@ -368,291 +461,367 @@
       gap: 18px;
     }
 
-    .category {
-      min-height: 270px;
-      border-radius: var(--radius);
-      overflow: hidden;
+    .category-card {
       position: relative;
-      color: white;
-      display: flex;
-      align-items: end;
-      padding: 25px;
-      background-position: center;
-      background-size: cover;
-      transition: 0.3s ease;
-    }
-
-    .category:hover {
-      transform: translateY(-6px);
+      min-height: 300px;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--green);
       box-shadow: var(--shadow);
+      isolation: isolate;
     }
 
-    .category::after {
+    .category-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      z-index: -2;
+    }
+
+    .category-card::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(transparent 30%, rgba(0,0,0,0.78));
+      background: linear-gradient(
+        to top,
+        rgba(6, 26, 20, 0.95),
+        rgba(6, 26, 20, 0.08)
+      );
+      z-index: -1;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.07);
     }
 
     .category-content {
-      position: relative;
-      z-index: 2;
+      position: absolute;
+      bottom: 0;
+      padding: 24px;
+      color: white;
     }
 
-    .category h3 {
+    .category-content h3 {
       font-family: "Playfair Display", serif;
       font-size: 27px;
+      margin-bottom: 5px;
     }
 
-    .category p {
+    .category-content p {
       font-size: 13px;
-      opacity: 0.88;
+      color: rgba(255,255,255,0.78);
     }
 
-    .produce {
-      background-image: url("https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&w=900&q=85");
-    }
+    /* =========================
+       FEATURE / STORY
+    ========================== */
 
-    .bakery {
-      background-image: url("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85");
-    }
-
-    .pantry {
-      background-image: url("https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=900&q=85");
-    }
-
-    .drinks {
-      background-image: url("https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=85");
-    }
-
-    /* WHY US */
-
-    .why {
+    .story {
       background: white;
     }
 
-    .why-grid {
+    .story-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 55px;
+      gap: 70px;
       align-items: center;
     }
 
-    .why-image {
-      min-height: 560px;
+    .story-image {
+      position: relative;
+    }
+
+    .story-image img {
+      height: 520px;
+      object-fit: cover;
       border-radius: 30px;
-      background:
-        linear-gradient(rgba(18,60,50,0.12), rgba(18,60,50,0.12)),
-        url("https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=1200&q=90")
-        center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .story-badge {
+      position: absolute;
+      right: -20px;
+      bottom: 28px;
+      background: var(--orange);
+      color: white;
+      padding: 18px 22px;
+      border-radius: 18px;
+      font-weight: 800;
+      box-shadow: 0 16px 35px rgba(233,130,59,0.25);
+    }
+
+    .story-copy h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .story-copy > p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 28px;
     }
 
     .feature-list {
+      list-style: none;
       display: grid;
-      gap: 23px;
-      margin-top: 32px;
+      gap: 16px;
+      margin-bottom: 30px;
     }
 
-    .feature {
+    .feature-list li {
       display: flex;
-      gap: 17px;
+      align-items: flex-start;
+      gap: 12px;
+      font-weight: 700;
+      color: var(--green);
     }
 
-    .feature-icon {
-      flex: 0 0 50px;
-      width: 50px;
-      height: 50px;
-      background: #e7f0eb;
+    .check {
+      width: 25px;
+      height: 25px;
+      flex: 0 0 25px;
+      border-radius: 50%;
+      background: var(--green-light);
       color: var(--green);
-      border-radius: 15px;
       display: grid;
       place-items: center;
-      font-size: 21px;
+      font-size: 13px;
     }
 
-    .feature h3 {
-      color: var(--green);
-      margin-bottom: 3px;
-      font-size: 17px;
+    /* =========================
+       QUOTE
+    ========================== */
+
+    .quote-section {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .feature p {
-      color: var(--muted);
-      font-size: 14px;
+    .quote-section::before {
+      content: "“";
+      position: absolute;
+      left: 7%;
+      top: -60px;
+      font-family: "Playfair Display", serif;
+      font-size: 300px;
+      line-height: 1;
+      color: rgba(255,255,255,0.05);
     }
 
-    /* VISIT */
+    .quote-inner {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .quote-inner p {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.12;
+      margin-bottom: 22px;
+    }
+
+    .quote-inner span {
+      color: #f2a36a;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+
+    /* =========================
+       VISIT
+    ========================== */
 
     .visit {
-      padding: 90px 0;
+      background: var(--cream);
     }
 
     .visit-card {
-      background: var(--green);
-      border-radius: 30px;
-      padding: 60px;
-      color: white;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
+      grid-template-columns: 1.1fr 0.9fr;
+      overflow: hidden;
+      border-radius: 30px;
+      background: white;
+      box-shadow: var(--shadow);
     }
 
-    .visit h2 {
+    .visit-content {
+      padding: 60px;
+    }
+
+    .visit-content h2 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(38px, 5vw, 58px);
-      line-height: 1;
+      font-size: 50px;
+      line-height: 1.05;
+      color: var(--green);
       margin-bottom: 18px;
     }
 
-    .visit p {
-      color: #c7ddd5;
-      max-width: 520px;
+    .visit-content p {
+      color: var(--muted);
+      margin-bottom: 25px;
     }
 
-    .contact-box {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.13);
-      border-radius: 22px;
-      padding: 30px;
+    .contact-details {
+      display: grid;
+      gap: 15px;
+      margin: 25px 0 30px;
     }
 
     .contact-row {
       display: flex;
-      gap: 15px;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+      align-items: flex-start;
+      gap: 12px;
     }
 
-    .contact-row:last-child {
-      border-bottom: 0;
+    .contact-icon {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: var(--green-light);
     }
 
     .contact-row strong {
       display: block;
+      color: var(--green);
+      font-size: 13px;
     }
 
-    .contact-row span {
-      display: block;
-      color: #c7ddd5;
+    .contact-row span,
+    .contact-row a {
+      color: var(--muted);
       font-size: 14px;
     }
 
-    /* CTA */
-
-    .final-cta {
-      padding: 0 0 90px;
-    }
-
-    .cta-card {
-      border-radius: 30px;
+    .visit-image {
+      min-height: 500px;
       background:
-        linear-gradient(90deg, rgba(233,139,58,0.95), rgba(201,108,34,0.88)),
-        url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=80")
-        center/cover;
-      padding: 65px;
-      color: white;
-      text-align: center;
+        linear-gradient(rgba(15,47,38,0.18), rgba(15,47,38,0.18)),
+        url("https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1200&q=85")
+        center / cover no-repeat;
     }
 
-    .cta-card h2 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(36px, 5vw, 60px);
-      line-height: 1;
-      margin-bottom: 15px;
-    }
-
-    .cta-card p {
-      max-width: 620px;
-      margin: 0 auto 28px;
-      color: rgba(255,255,255,0.9);
-    }
-
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================== */
 
     footer {
-      background: #071f1a;
+      background: var(--green-dark);
       color: white;
-      padding: 55px 0 25px;
+      padding: 60px 0 25px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 40px;
+      grid-template-columns: 1.4fr 0.8fr 0.8fr;
+      gap: 50px;
       padding-bottom: 45px;
     }
 
-    footer h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 25px;
-      margin-bottom: 12px;
+    footer .brand-name {
+      color: white;
     }
 
-    footer p,
-    footer a {
-      color: #a9c0b8;
+    .footer-description {
+      max-width: 420px;
+      color: rgba(255,255,255,0.65);
+      margin-top: 18px;
       font-size: 14px;
     }
 
-    footer a:hover {
+    .footer-column h3 {
+      font-size: 14px;
+      margin-bottom: 18px;
+      color: #ffd2b0;
+    }
+
+    .footer-column a {
+      display: block;
+      color: rgba(255,255,255,0.68);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column a:hover {
       color: white;
     }
 
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 22px;
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      font-size: 12px;
-      color: #78928a;
     }
 
-    /* MOBILE */
+    /* =========================
+       ANIMATION
+    ========================== */
+
+    .fade-up {
+      animation: fadeUp 0.8s ease both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
 
     @media (max-width: 900px) {
-      .nav-links {
+      .desktop-nav {
         display: none;
-        position: absolute;
-        left: 4%;
-        right: 4%;
-        top: 74px;
-        background: white;
-        padding: 20px;
-        border-radius: 20px;
-        box-shadow: var(--shadow);
-        flex-direction: column;
-        align-items: stretch;
       }
 
-      .nav-links.show {
-        display: flex;
-      }
-
-      .mobile-menu {
+      .menu-button {
         display: block;
       }
 
-      .hero-card {
-        min-height: 650px;
-      }
-
-      .hero-content {
-        padding: 45px 30px;
-      }
-
       .category-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .why-grid,
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .story-image img {
+        height: 430px;
+      }
+
       .visit-card {
         grid-template-columns: 1fr;
       }
 
-      .why-image {
-        min-height: 420px;
+      .visit-image {
+        min-height: 380px;
+        order: -1;
       }
 
       .footer-grid {
@@ -660,95 +829,120 @@
       }
     }
 
-    @media (max-width: 600px) {
-      .topbar-inner {
-        justify-content: center;
-        text-align: center;
+    @media (max-width: 650px) {
+      .container {
+        width: min(100% - 28px, 1160px);
       }
 
-      .topbar-inner span {
+      .topbar-inner {
+        justify-content: center;
+      }
+
+      .topbar-message {
         display: none;
       }
 
-      nav {
-        height: 72px;
+      .topbar-phone {
+        font-size: 12px;
       }
 
-      .logo-mark {
-        width: 42px;
-        height: 42px;
+      .nav {
+        min-height: 72px;
       }
 
-      .logo-text strong {
-        font-size: 18px;
+      .brand-mark {
+        width: 45px;
+        height: 45px;
+        border-radius: 13px;
+        font-size: 24px;
+      }
+
+      .brand-name {
+        font-size: 20px;
       }
 
       .hero {
-        padding-top: 15px;
-      }
-
-      .hero-card {
         min-height: 690px;
-        border-radius: 25px;
         background-position: 62% center;
       }
 
       .hero-content {
-        padding: 35px 22px;
+        padding: 65px 0;
       }
 
       .hero h1 {
         font-size: 52px;
-        letter-spacing: -2px;
       }
 
-      .hero p {
+      .hero-text {
         font-size: 16px;
       }
 
-      .hero-buttons,
-      .hero-buttons .btn {
+      .hero-quote {
+        font-size: 17px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
         width: 100%;
       }
 
-      .quote-box {
-        padding: 40px 25px;
+      .trust-grid {
+        grid-template-columns: 1fr;
       }
 
-      .section {
-        padding: 65px 0;
+      .trust-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
       }
 
-      .section-head {
-        display: block;
+      .trust-item:last-child {
+        border-bottom: 0;
       }
 
-      .section-intro {
-        margin-top: 18px;
+      section {
+        padding: 72px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 32px;
       }
 
       .category-grid {
         grid-template-columns: 1fr;
       }
 
-      .category {
-        min-height: 230px;
+      .category-card {
+        min-height: 260px;
       }
 
-      .why-image {
-        min-height: 350px;
+      .story-image img {
+        height: 350px;
       }
 
-      .visit-card {
-        padding: 35px 22px;
+      .story-badge {
+        right: 12px;
+        bottom: 15px;
       }
 
-      .cta-card {
-        padding: 45px 22px;
+      .visit-content {
+        padding: 34px 24px;
+      }
+
+      .visit-content h2 {
+        font-size: 42px;
+      }
+
+      .visit-image {
+        min-height: 300px;
       }
 
       .footer-grid {
         grid-template-columns: 1fr;
+        gap: 35px;
       }
 
       .footer-bottom {
@@ -760,347 +954,443 @@
 
 <body>
 
+  <!-- TOP BAR -->
   <div class="topbar">
-    <div class="container topbar-inner">
-      <span>LOCAL • CONVENIENT • EVERYDAY ESSENTIALS</span>
-      <a href="tel:+16133823548">Call White's Grocery · 613-382-3548</a>
+    <div class="topbar-inner">
+      <div class="topbar-message">
+        Local • Convenient • Everyday Essentials
+      </div>
+
+      <a class="topbar-phone" href="tel:+16133823548">
+        Call White's Grocery · 613-382-3548
+      </a>
     </div>
   </div>
 
+  <!-- HEADER -->
   <header>
-    <div class="container">
-      <nav>
-        <a href="#" class="logo">
-          <div class="logo-mark">W</div>
-          <div class="logo-text">
-            <strong>White's Grocery</strong>
-            <span>FRESH · LOCAL · EVERYDAY</span>
-          </div>
-        </a>
+    <div class="container nav">
 
-        <div class="nav-links" id="navLinks">
-          <a href="#home">Home</a>
-          <a href="#categories">Shop</a>
-          <a href="#about">Why White's</a>
-          <a href="#visit">Visit Us</a>
-          <a class="nav-cta" href="tel:+16133823548">Call Us</a>
+      <a href="#home" class="brand">
+        <div class="brand-mark">W</div>
+
+        <div>
+          <div class="brand-name">White's Grocery</div>
+          <span class="brand-tagline">Fresh · Local · Everyday</span>
         </div>
+      </a>
 
-        <button class="mobile-menu" onclick="toggleMenu()" aria-label="Open menu">
-          ☰
-        </button>
+      <nav class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#why">Why White's</a>
+        <a href="#visit">Visit Us</a>
+        <a href="tel:+16133823548" class="nav-button">Call Us</a>
       </nav>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#why">Why White's</a>
+      <a href="#visit">Visit Us</a>
+      <a href="tel:+16133823548" class="mobile-call">Call Us</a>
     </div>
   </header>
 
+  <!-- HERO -->
   <main>
 
     <section class="hero" id="home">
       <div class="container">
-        <div class="hero-card">
+        <div class="hero-content fade-up">
 
-          <div class="hero-content">
-
-            <div class="eyebrow">
-              Your neighbourhood grocery destination
-            </div>
-
-            <h1>
-              Fresh choices.<br>
-              <span>Everyday essentials.</span>
-            </h1>
-
-            <p>
-              Good food starts close to home. Discover a convenient local
-              grocery destination in Gananoque for the things you need,
-              whenever you need them.
-            </p>
-
-            <div class="hero-buttons">
-              <a
-                class="btn btn-primary"
-                href="https://www.google.com/maps/search/?api=1&query=White%27s%20Grocery%2091%20Stone%20St%20N%20Gananoque%20ON"
-                target="_blank"
-              >
-                📍 Get Directions
-              </a>
-
-              <a class="btn btn-light" href="#categories">
-                Explore Our Store →
-              </a>
-            </div>
-
+          <div class="eyebrow">
+            Your neighbourhood grocery destination
           </div>
 
-        </div>
-      </div>
-    </section>
+          <h1>
+            Fresh choices.<br />
+            <span>Everyday essentials.</span>
+          </h1>
 
-    <section class="quote">
-      <div class="container">
-        <div class="quote-box">
-          <p>
-            “Good food brings people together —
-            and it starts right here.”
+          <p class="hero-text">
+            Good food starts close to home. Discover a convenient local
+            grocery destination in Gananoque for the things you need,
+            whenever you need them.
           </p>
 
-          <small>White's Grocery · Gananoque</small>
+          <div class="hero-quote">
+            “Fresh food, everyday essentials, and a store that feels close
+            to home.”
+          </div>
+
+          <div class="hero-actions">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=White%27s+Grocery+Gananoque+Ontario"
+              target="_blank"
+              rel="noopener"
+              class="button button-primary"
+            >
+              📍 Get Directions
+            </a>
+
+            <a href="#shop" class="button button-outline">
+              Explore Our Store →
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section class="section" id="categories">
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <div class="trust-icon">🥦</div>
+          <div>
+            <strong>Fresh Choices</strong>
+            <span>Everyday grocery essentials</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🏠</div>
+          <div>
+            <strong>Close to Home</strong>
+            <span>A convenient local destination</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🛒</div>
+          <div>
+            <strong>Everyday Needs</strong>
+            <span>Shop for the essentials</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SHOP -->
+    <section class="categories" id="shop">
       <div class="container">
 
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Explore the essentials</div>
-            <h2>Something for<br>everyday life.</h2>
-          </div>
+        <div class="section-heading">
+          <div class="section-label">Explore the store</div>
 
-          <p class="section-intro">
-            From fresh food to everyday necessities, White's Grocery is
-            designed around convenient local shopping.
+          <h2>
+            The essentials you reach for, all in one place.
+          </h2>
+
+          <p>
+            From fresh produce to everyday household needs, discover
+            convenient choices for your next grocery trip.
           </p>
         </div>
 
         <div class="category-grid">
 
-          <a class="category produce" href="#visit">
+          <article class="category-card">
+            <img
+              src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=900&q=85"
+              alt="Fresh fruits"
+              loading="lazy"
+            />
+
             <div class="category-content">
               <h3>Fresh Produce</h3>
-              <p>Fresh choices for your kitchen.</p>
+              <p>Bright, colourful choices for everyday meals.</p>
             </div>
-          </a>
+          </article>
 
-          <a class="category bakery" href="#visit">
-            <div class="category-content">
-              <h3>Bakery</h3>
-              <p>Everyday favourites for the table.</p>
-            </div>
-          </a>
+          <article class="category-card">
+            <img
+              src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=900&q=85"
+              alt="Fresh food"
+              loading="lazy"
+            />
 
-          <a class="category pantry" href="#visit">
             <div class="category-content">
-              <h3>Pantry Essentials</h3>
-              <p>The things your household needs.</p>
+              <h3>Fresh Foods</h3>
+              <p>Great ingredients for meals at home.</p>
             </div>
-          </a>
+          </article>
 
-          <a class="category drinks" href="#visit">
+          <article class="category-card">
+            <img
+              src="https://images.unsplash.com/photo-1601598851547-4302969d8f4c?auto=format&fit=crop&w=900&q=85"
+              alt="Grocery products"
+              loading="lazy"
+            />
+
             <div class="category-content">
-              <h3>Drinks & More</h3>
-              <p>Pick up something for the journey.</p>
+              <h3>Pantry Staples</h3>
+              <p>The everyday basics your household needs.</p>
             </div>
-          </a>
+          </article>
+
+          <article class="category-card">
+            <img
+              src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=900&q=85"
+              alt="Household essentials"
+              loading="lazy"
+            />
+
+            <div class="category-content">
+              <h3>Household Essentials</h3>
+              <p>Practical products for everyday living.</p>
+            </div>
+          </article>
 
         </div>
       </div>
     </section>
 
-    <section class="section why" id="about">
-      <div class="container">
+    <!-- WHY WHITE'S -->
+    <section class="story" id="why">
+      <div class="container story-grid">
 
-        <div class="why-grid">
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1579113800032-c38bd7635818?auto=format&fit=crop&w=1200&q=85"
+            alt="Fresh grocery produce"
+            loading="lazy"
+          />
 
-          <div class="why-image"></div>
-
-          <div>
-            <div class="section-kicker">Why shop local?</div>
-
-            <h2>
-              Your neighbourhood.
-              Your essentials.
-              Your store.
-            </h2>
-
-            <div class="feature-list">
-
-              <div class="feature">
-                <div class="feature-icon">✓</div>
-
-                <div>
-                  <h3>Convenient local shopping</h3>
-                  <p>
-                    Get everyday essentials without making a long trip.
-                  </p>
-                </div>
-              </div>
-
-              <div class="feature">
-                <div class="feature-icon">♡</div>
-
-                <div>
-                  <h3>A friendly local feel</h3>
-                  <p>
-                    A neighbourhood store built around convenient everyday shopping.
-                  </p>
-                </div>
-              </div>
-
-              <div class="feature">
-                <div class="feature-icon">★</div>
-
-                <div>
-                  <h3>Made for everyday life</h3>
-                  <p>
-                    From last-minute needs to everyday grocery runs,
-                    keep your shopping simple.
-                  </p>
-                </div>
-              </div>
-
-            </div>
+          <div class="story-badge">
+            Shop local. Shop conveniently.
           </div>
+        </div>
+
+        <div class="story-copy">
+
+          <div class="section-label">Why White's</div>
+
+          <h2>
+            Your local shop for the things that matter every day.
+          </h2>
+
+          <p>
+            Grocery shopping should be simple. White's Grocery gives
+            shoppers a convenient local place to find everyday essentials
+            without making the trip complicated.
+          </p>
+
+          <ul class="feature-list">
+
+            <li>
+              <span class="check">✓</span>
+              <span>Convenient local grocery shopping</span>
+            </li>
+
+            <li>
+              <span class="check">✓</span>
+              <span>Everyday essentials in one destination</span>
+            </li>
+
+            <li>
+              <span class="check">✓</span>
+              <span>A simple, neighbourhood-focused experience</span>
+            </li>
+
+          </ul>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=White%27s+Grocery+Gananoque+Ontario"
+            target="_blank"
+            rel="noopener"
+            class="button button-primary"
+          >
+            Find White's Grocery
+          </a>
 
         </div>
       </div>
     </section>
 
+    <!-- QUOTE -->
+    <section class="quote-section">
+      <div class="container">
+        <div class="quote-inner">
+
+          <p>
+            “Good food starts close to home.”
+          </p>
+
+          <span>White's Grocery · Gananoque</span>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
     <section class="visit" id="visit">
       <div class="container">
 
         <div class="visit-card">
 
-          <div>
-            <div class="section-kicker">Come visit us</div>
+          <div class="visit-content">
+
+            <div class="section-label">Come by and see us</div>
 
             <h2>
-              Fresh choices are
-              closer than you think.
+              Your next grocery trip starts here.
             </h2>
 
             <p>
-              Stop by White's Grocery in Gananoque and make your next
-              grocery run simple and convenient.
+              Need everyday essentials? Find White's Grocery in Gananoque
+              and make your next shopping trip simple and convenient.
             </p>
 
-            <br>
+            <div class="contact-details">
 
-            <a
-              class="btn btn-primary"
-              href="https://www.google.com/maps/search/?api=1&query=White%27s%20Grocery%2091%20Stone%20St%20N%20Gananoque%20ON"
-              target="_blank"
-            >
-              Get Directions →
-            </a>
+              <div class="contact-row">
+                <div class="contact-icon">📍</div>
+
+                <div>
+                  <strong>Location</strong>
+                  <span>Gananoque, Ontario</span>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-icon">📞</div>
+
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+16133823548">
+                    613-382-3548
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="hero-actions">
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=White%27s+Grocery+Gananoque+Ontario"
+                target="_blank"
+                rel="noopener"
+                class="button button-primary"
+              >
+                Get Directions
+              </a>
+
+              <a
+                href="tel:+16133823548"
+                class="button"
+                style="
+                  border: 1px solid #d9ddd8;
+                  color: #173d32;
+                "
+              >
+                Call the Store
+              </a>
+
+            </div>
+
           </div>
 
-          <div class="contact-box">
-
-            <div class="contact-row">
-              <div>📍</div>
-              <div>
-                <strong>Find us</strong>
-                <span>91 Stone St N, Gananoque, ON K7G 1Y1</span>
-              </div>
-            </div>
-
-            <div class="contact-row">
-              <div>☎</div>
-              <div>
-                <strong>Give us a call</strong>
-                <span>
-                  <a href="tel:+16133823548">613-382-3548</a>
-                </span>
-              </div>
-            </div>
-
-            <div class="contact-row">
-              <div>🛒</div>
-              <div>
-                <strong>Local convenience</strong>
-                <span>Your neighbourhood grocery destination</span>
-              </div>
-            </div>
-
-          </div>
+          <div class="visit-image"></div>
 
         </div>
-      </div>
-    </section>
-
-    <section class="final-cta">
-      <div class="container">
-
-        <div class="cta-card">
-
-          <h2>
-            Your next grocery run<br>
-            starts here.
-          </h2>
-
-          <p>
-            Fresh choices, everyday essentials and the convenience
-            of shopping close to home.
-          </p>
-
-          <a
-            class="btn btn-light"
-            href="tel:+16133823548"
-          >
-            Call White's Grocery
-          </a>
-
-        </div>
-
       </div>
     </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
-
     <div class="container">
 
       <div class="footer-grid">
 
         <div>
-          <h3>White's Grocery</h3>
-          <p>
-            Fresh choices. Local heart. Everyday essentials.
+          <a href="#home" class="brand">
+            <div class="brand-mark">W</div>
+
+            <div>
+              <div class="brand-name">White's Grocery</div>
+              <span class="brand-tagline">Fresh · Local · Everyday</span>
+            </div>
+          </a>
+
+          <p class="footer-description">
+            A convenient local grocery destination for fresh food and
+            everyday essentials in Gananoque, Ontario.
           </p>
         </div>
 
-        <div>
-          <h3>Visit</h3>
-          <p>
-            91 Stone St N<br>
-            Gananoque, ON K7G 1Y1
-          </p>
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="#home">Home</a>
+          <a href="#shop">Shop</a>
+          <a href="#why">Why White's</a>
+          <a href="#visit">Visit Us</a>
         </div>
 
-        <div>
+        <div class="footer-column">
           <h3>Contact</h3>
-          <p>
-            <a href="tel:+16133823548">
-              613-382-3548
-            </a>
-          </p>
+          <a href="tel:+16133823548">613-382-3548</a>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=White%27s+Grocery+Gananoque+Ontario"
+            target="_blank"
+            rel="noopener"
+          >
+            Get Directions
+          </a>
         </div>
 
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 White's Grocery. All rights reserved.</span>
-        <span>Designed as a website concept.</span>
+        <span>
+          © 2026 White's Grocery. All rights reserved.
+        </span>
+
+        <span>
+          Fresh · Local · Everyday
+        </span>
       </div>
 
     </div>
-
   </footer>
 
+  <!-- MENU SCRIPT -->
   <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
-    }
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-    document.querySelectorAll(".nav-links a").forEach(function(link) {
-      link.addEventListener("click", function() {
-        document.getElementById("navLinks").classList.remove("show");
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+
+      menuButton.setAttribute("aria-expanded", isOpen);
+
+      menuButton.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰";
       });
     });
   </script>
 
 </body>
-</html>
+</html> 
